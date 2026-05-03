@@ -1,0 +1,26 @@
+Our institute focuses on AI, machine learning, data science, and software engineering education.
+
+We aim to provide industry-oriented training with practical projects, mentorship, and career guidance.
+
+Students receive:
+- Live mentorship
+- Hands-on projects
+- Resume guidance
+- Interview preparation
+- Placement assistance
+- Industry-recognized certificates
+
+Our programs are designed for:
+- Beginners entering AI
+- College students
+- Working professionals
+- Career switchers
+
+The curriculum emphasizes:
+- Practical implementation
+- Real-world workflows
+- AI engineering
+- Prompt engineering
+- Generative AI systems
+- RAG pipelines
+- LangChain frameworks

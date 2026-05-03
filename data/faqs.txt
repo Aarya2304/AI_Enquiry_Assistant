@@ -1,0 +1,20 @@
+Q: Do you provide certificates?
+A: Yes, industry-recognized certificates are provided after course completion.
+
+Q: Are the classes online or offline?
+A: We provide both online and hybrid learning options.
+
+Q: Do you provide placement support?
+A: Yes, placement assistance and interview preparation are included.
+
+Q: What are the payment options?
+A: Students can pay through installments, UPI, or bank transfer.
+
+Q: Are there live projects?
+A: Yes, students work on real-world industry projects.
+
+Q: Who are the instructors?
+A: Courses are taught by experienced industry professionals and AI engineers.
+
+Q: Is prior coding experience required?
+A: Beginner courses require no prior experience, but advanced tracks may need Python basics.
