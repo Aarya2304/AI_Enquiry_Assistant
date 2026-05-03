@@ -25,7 +25,6 @@ for message in st.session_state.messages:
 user_input = st.chat_input("Type your question here...")
 
 if user_input:
-
     # Store user message
     st.session_state.messages.append({
         "role": "user",
@@ -37,7 +36,12 @@ if user_input:
         st.markdown(user_input)
 
     # Generate AI response
-    ai_response = get_ai_response(user_input)
+    chat_history = st.session_state.messages
+
+    ai_response = get_ai_response(
+        user_input,
+        chat_history
+    )
 
     # Store assistant response
     st.session_state.messages.append({
