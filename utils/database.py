@@ -1,4 +1,5 @@
 import sqlite3
+import pandas as pd
 
 DB_PATH = "database/leads.db"
 
@@ -158,3 +159,24 @@ def get_dashboard_metrics():
         "avg_score": round(avg_score or 0, 2),
         "high_intent": high_intent
     }
+
+# -----------------------------
+# Fetch Leads DataFrame
+# -----------------------------
+
+def fetch_leads_dataframe():
+
+    conn = get_connection()
+
+    query = """
+    SELECT * FROM leads
+    """
+
+    df = pd.read_sql_query(
+        query,
+        conn
+    )
+
+    conn.close()
+
+    return df
