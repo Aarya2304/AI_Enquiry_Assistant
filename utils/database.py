@@ -121,3 +121,40 @@ if __name__ == "__main__":
     initialize_database()
 
     print("Database initialized successfully.")
+
+# -----------------------------
+# Fetch Dashboard Metrics
+# -----------------------------
+
+def get_dashboard_metrics():
+
+    conn = get_connection()
+
+    cursor = conn.cursor()
+
+    # Total leads
+    cursor.execute("""
+    SELECT COUNT(*) FROM leads
+    """)
+    total_leads = cursor.fetchone()[0]
+
+    # Average lead score
+    cursor.execute("""
+    SELECT AVG(lead_score) FROM leads
+    """)
+    avg_score = cursor.fetchone()[0]
+
+    # High intent leads
+    cursor.execute("""
+    SELECT COUNT(*) FROM leads
+    WHERE lead_score >= 50
+    """)
+    high_intent = cursor.fetchone()[0]
+
+    conn.close()
+
+    return {
+        "total_leads": total_leads,
+        "avg_score": round(avg_score or 0, 2),
+        "high_intent": high_intent
+    }
