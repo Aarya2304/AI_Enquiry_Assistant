@@ -1,0 +1,36 @@
+/* Main App */
+.stApp {
+    background-color: #0E1117;
+    color: white;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #161B22;
+}
+
+/* Chat Input */
+.stChatInputContainer {
+    border-top: 1px solid #30363D;
+}
+
+/* Metric Cards */
+[data-testid="metric-container"] {
+    background-color: #161B22;
+    border: 1px solid #30363D;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* Buttons */
+.stButton>button {
+    border-radius: 10px;
+    background-color: #238636;
+    color: white;
+    border: none;
+}
+
+/* Tables */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+}

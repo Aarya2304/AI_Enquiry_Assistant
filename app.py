@@ -3,6 +3,17 @@ from utils.chatbot import get_ai_response
 from utils.lead_scoring import detect_lead_intent
 from utils.database import insert_lead
 
+def load_css():
+
+    with open("assets/styles.css") as f:
+
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
+
 # Page configuration
 st.set_page_config(
     page_title="AI Enquiry Assistant",
@@ -10,9 +21,50 @@ st.set_page_config(
     layout="wide"
 )
 
+with st.sidebar:
+
+    st.title("🤖 AI Enquiry Assistant")
+
+    st.markdown("""
+    ### Features
+    - AI Chatbot
+    - RAG Retrieval
+    - Lead Capture
+    - Analytics Dashboard
+    - Conversational Memory
+    """)
+
+    st.divider()
+
+    st.info(
+        "Built using Streamlit, OpenRouter, and Retrieval-Augmented Generation."
+    )
+
 # Title
-st.title("🤖 AI Enquiry Assistant")
-st.markdown("Ask me anything about our courses and programs!")
+st.title("🤖 AI-Powered Enquiry Assistant")
+
+st.markdown("""
+Welcome to the intelligent student enquiry platform.
+
+This assistant can:
+- Answer course-related questions
+- Recommend learning paths
+- Provide placement and curriculum information
+- Help students explore AI programs
+""")
+
+st.divider()
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Courses Offered", 6)
+
+with col2:
+    st.metric("Placement Support", "Yes")
+
+with col3:
+    st.metric("AI Assistance", "24/7")
 
 # Session state for chat history
 if "messages" not in st.session_state:
